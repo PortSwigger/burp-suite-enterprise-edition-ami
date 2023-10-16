@@ -1,0 +1,212 @@
+Parameters:
+# Instance Configuration
+  ImageId:
+    Description: The ID of the Burp Suite Enterprise Edition AMI.
+    Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
+    Default: /portswigger/burp-suite-enterprise-edition/latest/enterprise-ami
+  InstanceType:
+    Description: The instance type.
+    Type: String
+    Default: m6a.2xlarge
+    AllowedValues:
+      - m6a.xlarge
+      - m6a.2xlarge
+      - m6a.4xlarge
+      - m6a.8xlarge
+      - m6a.12xlarge
+      - m6a.16xlarge
+      - m6a.24xlarge
+      - m6a.32xlarge
+      - m6a.48xlarge
+      - m6i.2xlarge
+      - m6i.4xlarge
+      - m6i.8xlarge
+      - m6i.12xlarge
+      - m6i.16xlarge
+      - m6i.24xlarge
+      - m6i.32xlarge
+      - m7i.2xlarge
+      - m7i.4xlarge
+      - m7i.8xlarge
+      - m7i.12xlarge
+      - m7i.16xlarge
+      - m7i.24xlarge
+      - m7i.48xlarge
+  KeyName:
+    Description: The name of the keypair that will be used to access the instance.
+    Type: AWS::EC2::KeyPair::KeyName
+  IamInstanceProfile:
+    Description: |
+      The name of an IAM instance profile to apply to the EC2 instance. 
+      If you are storing settings/credentials in SSM or Secrets Manager, 
+      this is how you grant the instance access to those parameter stores.
+    Type: String
+
+# Network Configuration
+  SubnetId:
+    Description: The ID of the subnet to launch the instance into.
+    Type: AWS::EC2::Subnet::Id
+  SecurityGroups:
+    Description: The ids of the security groups to apply to the EC2 instance.
+    Type: List<AWS::EC2::SecurityGroup::Id>
+
+# Database Configuration
+  DatabaseUrl:
+    Description: The JDBC URL of the Burp Suite Enterprise database.
+    Type: String
+  EnterpriseServerUsername:
+    Description: The username of the enterprise server user in the Burp Suite Enterprise database.
+    Type: String
+  EnterpriseServerPassword:
+    Description: The password of the enterprise server user in the Burp Suite Enterprise database.
+    Type: String
+  ScanningResourceUsername:
+    Description: The username of the scanning resource user in the Burp Suite Enterprise database.
+    Type: String
+  ScanningResourcePassword:
+    Description: The password of the scanning resource user in the Burp Suite Enterprise database.
+    Type: String
+
+# Web Server Configuration
+  UseHttps:
+    Description: Whether the web server should run using HTTPS. Requires a TLS certificate and passphrase to be set.
+    Type: String
+    AllowedValues:
+    - "true"
+    - "false"
+  HttpsCertificate:
+    Description: The Base64 encoding of the TLS certificate. Required if UseHttps is true.
+    Type: String
+  HttpsPassphrase:
+    Description: The passphrase for the specified TLS certificate. Required if UseHttps is true.
+    Type: String
+
+# Resource Allocation Configuration
+  MaxCpuPerContainer:
+    Description: The maximum CPU units for each container. Optional, leave blank for default.
+    Type: String
+  MaxMemoryPerContainer:
+    Description: The maximum memory each container can use.  Optional, leave blank for default.
+    Type: String
+  WebServerContainerCpu:
+    Description: The requested CPU units for the web server container.  Optional, leave blank for default.
+    Type: String
+  WebServerContainerMemory:
+    Description: The requested memory for the web server container.  Optional, leave blank for default.
+    Type: String
+  EnterpriseServerContainerCpu:
+    Description: The requested CPU units for the enterprise server container.  Optional, leave blank for default.
+    Type: String
+  EnterpriseServerContainerMemory:
+    Description: The requested memory for the enterprise server container.  Optional, leave blank for default.
+    Type: String
+  ConnectionCheckContainerCpu:
+    Description: The requested CPU units for a connection check container.  Optional, leave blank for default.
+    Type: String
+  ConnectionCheckContainerMemory:
+    Description: The requested memory for a connection check container.  Optional, leave blank for default.
+    Type: String
+  ScanContainerCpu:
+    Description: The requested CPU units for a scan container.  Optional, leave blank for default.
+    Type: String
+  ScanContainerMemory:
+    Description: The requested memory for a scan container.  Optional, leave blank for default.
+    Type: String
+
+# Advanced Settings
+  ContainerRegistry:
+    Description: The container registry to load images from.
+    Type: String
+    Default: public.ecr.aws
+Metadata:
+  AWS::CloudFormation::Interface:
+    ParameterGroups:
+      -
+        Label:
+          default: Instance Configuration
+        Parameters:
+          - ImageId
+          - LatestImageId
+          - InstanceType
+          - KeyName
+          - IamInstanceProfile
+      - 
+        Label:
+          default: Network Configuration
+        Parameters:
+          - SubnetId
+          - SecurityGroups
+      -
+        Label:
+          default: Database Configuration
+        Parameters:
+          - DatabaseUrl
+          - EnterpriseServerUsername
+          - EnterpriseServerPassword
+          - ScanningResourceUsername
+          - ScanningResourcePassword
+      -
+        Label:
+          default: Web Server Configuration
+        Parameters:
+          - UseHttps
+          - HttpsCertificate
+          - HttpsPassphrase
+      -
+        Label:
+          default: Resource Allocation Configuration (optional, see https://portswigger.net/burp/documentation/enterprise/getting-started/system-requirements/k8-sys-req#container-system-requirements)
+        Parameters:
+          - MaxCpuPerContainer
+          - MaxMemoryPerContainer
+          - WebServerContainerCpu
+          - WebServerContainerMemory
+          - EnterpriseServerContainerCpu
+          - EnterpriseServerContainerMemory
+          - ConnectionCheckContainerCpu
+          - ConnectionCheckContainerMemory
+          - ScanContainerCpu
+          - ScanContainerMemory
+      -
+        Label:
+          default: Advanced Settings
+        Parameters:
+          - ContainerRegistry
+
+Resources:
+  BurpSuiteEnterpriseEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      IamInstanceProfile: !Ref IamInstanceProfile
+      ImageId: !Ref ImageId
+      InstanceType: !Ref InstanceType
+      KeyName: !Ref KeyName
+      SecurityGroupIds: !Ref SecurityGroups
+      SubnetId: !Ref SubnetId
+      Tags:
+        - Key: Name
+          Value: !Sub ${AWS::StackName}-instance
+      UserData: 
+        Fn::Base64: !Sub |
+          #!/bin/bash
+
+          echo "Environment='AWS_REGION=${AWS::Region}'" | sudo tee -a /etc/systemd/system/bsee-configuration.service.d/environment.conf >> /dev/null
+          echo "Environment='BSEE_DATABASE_URL=${DatabaseUrl}'" | sudo tee -a /etc/systemd/system/bsee-configuration.service.d/environment.conf >> /dev/null
+          echo "Environment='BSEE_DATABASE_ENTERPRISE_SERVER_USERNAME=${EnterpriseServerUsername}'" | sudo tee -a /etc/systemd/system/bsee-configuration.service.d/environment.conf >> /dev/null
+          echo "Environment='BSEE_DATABASE_ENTERPRISE_SERVER_PASSWORD=${EnterpriseServerPassword}'" | sudo tee -a /etc/systemd/system/bsee-configuration.service.d/environment.conf >> /dev/null
+          echo "Environment='BSEE_DATABASE_SCANNING_RESOURCE_USERNAME=${ScanningResourceUsername}'" | sudo tee -a /etc/systemd/system/bsee-configuration.service.d/environment.conf >> /dev/null
+          echo "Environment='BSEE_DATABASE_SCANNING_RESOURCE_PASSWORD=${ScanningResourcePassword}'" | sudo tee -a /etc/systemd/system/bsee-configuration.service.d/environment.conf >> /dev/null
+          echo "Environment='BSEE_SERVICES_WEB_SERVER_USE_HTTPS=${UseHttps}'" | sudo tee -a /etc/systemd/system/bsee-configuration.service.d/environment.conf >> /dev/null
+          echo "Environment='BSEE_SERVICES_WEB_SERVER_HTTPS_CERTIFICATE_SECRET=${HttpsCertificate}'" | sudo tee -a /etc/systemd/system/bsee-configuration.service.d/environment.conf >> /dev/null
+          echo "Environment='BSEE_SERVICES_WEB_SERVER_HTTPS_PASSPHRASE_SECRET=${HttpsPassphrase}'" | sudo tee -a /etc/systemd/system/bsee-configuration.service.d/environment.conf >> /dev/null
+          echo "Environment='BSEE_MAX_CPU_PER_CONTAINER=${MaxCpuPerContainer}'" | sudo tee -a /etc/systemd/system/bsee-configuration.service.d/environment.conf >> /dev/null
+          echo "Environment='BSEE_MAX_MEMORY_PER_CONTAINER=${MaxMemoryPerContainer}'" | sudo tee -a /etc/systemd/system/bsee-configuration.service.d/environment.conf >> /dev/null
+          echo "Environment='BSEE_WEB_SERVER_CONTAINER_CPU=${WebServerContainerCpu}'" | sudo tee -a /etc/systemd/system/bsee-configuration.service.d/environment.conf >> /dev/null
+          echo "Environment='BSEE_WEB_SERVER_CONTAINER_MEMORY=${WebServerContainerMemory}'" | sudo tee -a /etc/systemd/system/bsee-configuration.service.d/environment.conf >> /dev/null
+          echo "Environment='BSEE_ENTERPRISE_SERVER_CONTAINER_CPU=${EnterpriseServerContainerCpu}'" | sudo tee -a /etc/systemd/system/bsee-configuration.service.d/environment.conf >> /dev/null
+          echo "Environment='BSEE_ENTERPRISE_SERVER_CONTAINER_MEMORY=${EnterpriseServerContainerMemory}'" | sudo tee -a /etc/systemd/system/bsee-configuration.service.d/environment.conf >> /dev/null
+          echo "Environment='BSEE_CONNECTION_CHECK_CONTAINER_CPU=${ConnectionCheckContainerCpu}'" | sudo tee -a /etc/systemd/system/bsee-configuration.service.d/environment.conf >> /dev/null
+          echo "Environment='BSEE_CONNECTION_CHECK_CONTAINER_MEMORY=${ConnectionCheckContainerMemory}'" | sudo tee -a /etc/systemd/system/bsee-configuration.service.d/environment.conf >> /dev/null
+          echo "Environment='BSEE_SCAN_CONTAINER_CPU=${ScanContainerCpu}'" | sudo tee -a /etc/systemd/system/bsee-configuration.service.d/environment.conf >> /dev/null
+          echo "Environment='BSEE_SCAN_CONTAINER_MEMORY=${ScanContainerMemory}'" | sudo tee -a /etc/systemd/system/bsee-configuration.service.d/environment.conf >> /dev/null
+          echo "Environment='BSEE_CONTAINER_REGISTRY=${ContainerRegistry}'" | sudo tee -a /etc/systemd/system/bsee-configuration.service.d/environment.conf >> /dev/null
+          sudo systemctl daemon-reload
