@@ -4,7 +4,9 @@ This CloudFormation template simplifies deployment of an EC2 instance runnning t
 
 ## Enterprise Version
 
-By default, the template will launch the latest release of Burp Suite Enterprise Edition. If you want to "pin" the version to a specific release, replace the "latest" tag with the required version number e.g. `/portswigger/burp-suite-enterprise-edition/2023.9.1/enterprise-ami`.
+The template requires that the AMI ID is supplied.  The choice of AMI ID has the effect of setting the version of Burp Suite Enterprise Edition.  Note that the AMI ID should be available in the same region as the template is being deployed in.
+
+The current list of AMI IDs is available [here](/published_amis.md)
 
 ## Template Parameters
 

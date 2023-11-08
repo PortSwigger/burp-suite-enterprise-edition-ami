@@ -2,8 +2,8 @@ Parameters:
 # Instance Configuration
   ImageId:
     Description: The ID of the Burp Suite Enterprise Edition AMI.
-    Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
-    Default: /portswigger/burp-suite-enterprise-edition/latest/enterprise-ami
+    Type: AWS::EC2::Image::Id
+    # See https://github.com/PortSwigger/burp-suite-enterprise-edition-ami/published-amis.md for the images available in each region
   InstanceType:
     Description: The instance type.
     Type: String
