@@ -4,4 +4,4 @@ The Burp Suite Enterprise Edition AMI includes both the server and scanning mach
 
 The current list of AMI IDs is available [here](published_amis.md)
 
-See https://portswigger.net/burp/documentation/enterprise/getting-started/ami for more information.
+
