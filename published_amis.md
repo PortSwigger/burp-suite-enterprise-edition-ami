@@ -1,33 +1,33 @@
-# Burp Suite Enterprise Edition 2024.3.2 AMIs
+# Burp Suite Enterprise Edition 2024.4 AMIs
 
 The published AMI Ids are:
 
 | AWS Region | AMI Id |
 | :--------- | :----- |
-| af-south-1 | ami-06fc265308b38a5ed |
-| ap-east-1 | ami-0bf158fbdbd5a304c |
-| ap-south-1 | ami-06a8b1832a2a4e1a4 |
-| ap-south-2 | ami-0c831bcc3cd3dc875 |
-| ap-northeast-3 | ami-0f655733a610c5a24 |
-| ap-northeast-2 | ami-06fa78ec429551d58 |
-| ap-southeast-1 | ami-019aefc3b2038809f |
-| ap-southeast-2 | ami-0bfec0cd9ccfd4109 |
-| ap-southeast-4 | ami-074e9837557082d78 |
-| ap-northeast-1 | ami-0a74951105494e3e5 |
-| ca-central-1 | ami-03943e65a6c4edb98 |
-| eu-central-1 | ami-0d89850906f4430e6 |
-| eu-central-2 | ami-01b702a91055cf304 |
-| eu-west-1 | ami-09688c9e9982f58b2 |
-| eu-west-2 | ami-09bb92e013a51d32e |
-| eu-west-3 | ami-0e085861ada14fce0 |
-| eu-north-1 | ami-00db330fbc76c55c6 |
-| eu-south-1 | ami-04a9f9654cf87677a |
-| eu-south-2 | ami-05838de9df153c333 |
-| il-central-1 | ami-01f836188a5382e0b |
-| me-south-1 | ami-099bf5bf6e8cc52d6 |
-| me-central-1 | ami-0f2b2191cbcd0d8cf |
-| sa-east-1 | ami-077ba3b23d1d7749b |
-| us-east-2 | ami-058038c070a7b4123 |
-| us-east-1 | ami-01266632e134d4a1e |
-| us-west-1 | ami-0812cf10db2796099 |
-| us-west-2 | ami-059fda5fe0964ca1a |
+| af-south-1 | ami-0d9f58c1b8f8f88eb |
+| ap-east-1 | ami-0deb34c0b51c698bc |
+| ap-south-1 | ami-0788a92ac73cf1e48 |
+| ap-south-2 | ami-03b9a5dcca6ed03d9 |
+| ap-northeast-3 | ami-018e57c2bab6742d5 |
+| ap-northeast-2 | ami-0a1392d795f554e2e |
+| ap-southeast-1 | ami-0ee1a8b4b20d2b105 |
+| ap-southeast-2 | ami-0d2a6dd955225bf40 |
+| ap-southeast-4 | ami-0151c82ea186e544c |
+| ap-northeast-1 | ami-0e0786989d8bc6423 |
+| ca-central-1 | ami-074d02078ca3bc1ed |
+| eu-central-1 | ami-038c1e45d8f4f4941 |
+| eu-central-2 | ami-03ae57257c647c169 |
+| eu-west-1 | ami-0fef435c37dfa0034 |
+| eu-west-2 | ami-027f51e5d649ddfc5 |
+| eu-west-3 | ami-0c4af091d7f5c1214 |
+| eu-north-1 | ami-0ffff21394a8c6fa4 |
+| eu-south-1 | ami-0afcb2d4e3a8df9ce |
+| eu-south-2 | ami-0c5045c05c0c6ced1 |
+| il-central-1 | ami-0953b32af95ed0c00 |
+| me-south-1 | ami-00ed8e58aa14595c4 |
+| me-central-1 | ami-07d779c084f479e5a |
+| sa-east-1 | ami-0cba398455b62c124 |
+| us-east-2 | ami-043a8fe0732b651b2 |
+| us-east-1 | ami-08dd49f9d4d7fb659 |
+| us-west-1 | ami-045b682109de1cc95 |
+| us-west-2 | ami-03571538db14615f2 |
