@@ -7,31 +7,15 @@ Parameters:
   InstanceType:
     Description: The instance type.
     Type: String
-    Default: m6a.2xlarge
+    Default: c7i.4xlarge
     AllowedValues:
-      - m6a.xlarge
-      - m6a.2xlarge
-      - m6a.4xlarge
-      - m6a.8xlarge
-      - m6a.12xlarge
-      - m6a.16xlarge
-      - m6a.24xlarge
-      - m6a.32xlarge
-      - m6a.48xlarge
-      - m6i.2xlarge
-      - m6i.4xlarge
-      - m6i.8xlarge
-      - m6i.12xlarge
-      - m6i.16xlarge
-      - m6i.24xlarge
-      - m6i.32xlarge
-      - m7i.2xlarge
-      - m7i.4xlarge
-      - m7i.8xlarge
-      - m7i.12xlarge
-      - m7i.16xlarge
-      - m7i.24xlarge
-      - m7i.48xlarge
+      - c7i.2xlarge # Up to 1 concurrent scan (with default resource allocations)
+      - c7i.4xlarge # Up to 3 concurrent scans (with default resource allocations)
+      - c7i.8xlarge # Up to 7 concurrent scans (with default resource allocations)
+      - c7i.12xlarge # Up to 11 concurrent scans (with default resource allocations)
+      - c7i.16xlarge # Up to 15 concurrent scans (with default resource allocations)
+      - c7i.24xlarge # Up to 23 concurrent scans (with default resource allocations)
+      - c7i.48xlarge # Up to 47 concurrent scans (with default resource allocations)
   KeyName:
     Description: The name of the keypair that will be used to access the instance.
     Type: AWS::EC2::KeyPair::KeyName
