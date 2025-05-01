@@ -1,4 +1,4 @@
-# Burp Suite Enterprise Edition 2025.3.1 AMIs
+# Burp Suite DAST 2025.3.1 AMIs
 
 The published AMI Ids are:
 

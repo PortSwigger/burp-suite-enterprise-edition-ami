@@ -1,10 +1,10 @@
 # CloudFormation Template
 
-This CloudFormation template simplifies deployment of an EC2 instance runnning the Burp Suite Enterprise Edition AMI. It only creates the EC2 instance. You will need to create the network infrastructure needed (VPC, subnet, security groups etc.) and provide [an external database](https://portswigger.net/burp/documentation/enterprise/getting-started/setup-ext-db).
+This CloudFormation template simplifies deployment of an EC2 instance running the Burp Suite DAST AMI. It only creates the EC2 instance. You will need to create the network infrastructure needed (VPC, subnet, security groups etc.) and provide [an external database](https://portswigger.net/burp/documentation/enterprise/getting-started/setup-ext-db).
 
-## Enterprise Version
+## DAST Version
 
-The template requires that the AMI ID is supplied.  The choice of AMI ID has the effect of setting the version of Burp Suite Enterprise Edition.  Note that the AMI ID should be available in the same region as the template is being deployed in.
+The template requires that the AMI ID is supplied.  The choice of AMI ID has the effect of setting the version of Burp Suite DAST.  Note that the AMI ID should be available in the same region as the template is being deployed in.
 
 The current list of AMI IDs is available [here](/published_amis.md)
 

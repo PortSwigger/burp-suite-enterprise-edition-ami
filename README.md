@@ -1,13 +1,13 @@
 # Setup guide: using an AMI
 
-You can use the Burp Suite Enterprise Edition AMI to create an EC2 instance that contains Burp Suite Enterprise Edition. The AMI includes both the server and scanning machine components required for an installation capable of scanning.
+You can use the Burp Suite DAST AMI to create an EC2 instance that contains Burp Suite DAST. The AMI includes both the server and scanning machine components required for an installation capable of scanning.
 
-Before you choose to deploy Burp Suite Enterprise Edition using an AMI, be aware of the following key points:
+Before you choose to deploy Burp Suite DAST using an AMI, be aware of the following key points:
 
 - Easy to install if your organization already uses AWS.
 - You'll need experience with EC2 and managing your own external relational database instance, such as AWS RDS.
 - All scans run on a single EC2 instance. The number of scans you can run concurrently depends on the size of your instance. We don't currently support external scanning machines.
-- Doesn't support automatic updates. We recommend that you deploy a new AMI that contains the updated version of Burp Suite Enterprise Edition to a replacement instance.
+- Doesn't support automatic updates. We recommend that you deploy a new AMI that contains the updated version of Burp Suite DAST to a replacement instance.
 
 ## Prerequisites
 
@@ -73,9 +73,9 @@ The requirements for the external database are the same as for a Kubernetes inst
 
 The following is within our support scope for AMI instances:
 
-- Creation of an EC2 instance that contains Burp Suite Enterprise Edition and its components using an AMI.
+- Creation of an EC2 instance that contains Burp Suite DAST and its components using an AMI.
 - Supporting the application running state post-deployment.
-- Updating to later versions of Burp Suite Enterprise Edition.
+- Updating to later versions of Burp Suite DAST.
 
 ### Not supported
 
@@ -87,10 +87,10 @@ We are unable to support the following:
 
 ## AMI customer responsibilities
 
-When you use an AMI to deploy and run Burp Suite Enterprise Edition, it is your responsibility to do the following:
+When you use an AMI to deploy and run Burp Suite DAST, it is your responsibility to do the following:
 
 - Make sure that your instance is appropriately sized.
-- Keep Burp Suite Enterprise Edition up to date with our latest releases.
+- Keep Burp Suite DAST up to date with our latest releases.
 - Manage your infrastructure and security settings, such as your subnets, security groups, and TLS certificates.
 
 ### Supported regions

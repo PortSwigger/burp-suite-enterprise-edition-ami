@@ -1,7 +1,7 @@
 Parameters:
 # Instance Configuration
   ImageId:
-    Description: The ID of the Burp Suite Enterprise Edition AMI.
+    Description: The ID of the Burp Suite DAST AMI.
     Type: AWS::EC2::Image::Id
     # See https://github.com/PortSwigger/burp-suite-enterprise-edition-ami/published-amis.md for the images available in each region
   InstanceType:
@@ -36,19 +36,19 @@ Parameters:
 
 # Database Configuration
   DatabaseUrl:
-    Description: The JDBC URL of the Burp Suite Enterprise database.
+    Description: The JDBC URL of the Burp Suite DAST database.
     Type: String
   EnterpriseServerUsername:
-    Description: The username of the enterprise server user in the Burp Suite Enterprise database.
+    Description: The username of the DAST server user in the Burp Suite DAST database.
     Type: String
   EnterpriseServerPassword:
-    Description: The password of the enterprise server user in the Burp Suite Enterprise database.
+    Description: The password of the DAST server user in the Burp Suite DAST database.
     Type: String
   ScanningResourceUsername:
-    Description: The username of the scanning resource user in the Burp Suite Enterprise database.
+    Description: The username of the scanning resource user in the Burp Suite DAST database.
     Type: String
   ScanningResourcePassword:
-    Description: The password of the scanning resource user in the Burp Suite Enterprise database.
+    Description: The password of the scanning resource user in the Burp Suite DAST database.
     Type: String
 
 # Web Server Configuration
@@ -79,10 +79,10 @@ Parameters:
     Description: The requested memory for the web server container.  Optional, leave blank for default.
     Type: String
   EnterpriseServerContainerCpu:
-    Description: The requested CPU units for the enterprise server container.  Optional, leave blank for default.
+    Description: The requested CPU units for the DAST server container.  Optional, leave blank for default.
     Type: String
   EnterpriseServerContainerMemory:
-    Description: The requested memory for the enterprise server container.  Optional, leave blank for default.
+    Description: The requested memory for the DAST server container.  Optional, leave blank for default.
     Type: String
   ConnectionCheckContainerCpu:
     Description: The requested CPU units for a connection check container.  Optional, leave blank for default.

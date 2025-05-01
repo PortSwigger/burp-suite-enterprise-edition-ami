@@ -1,8 +1,8 @@
 # Using an AMI to launch an instance
 
-Burp Suite Enterprise Edition is preinstalled in the Burp Suite Enterprise Edition AMI. To see a full list of AMI IDs and the regions we support, see [Published AMIs](https://github.com/PortSwigger/burp-suite-enterprise-edition-ami/blob/main/published_amis.md).
+Burp Suite DAST is preinstalled in the Burp Suite DAST AMI. To see a full list of AMI IDs and the regions we support, see [Published AMIs](https://github.com/PortSwigger/burp-suite-enterprise-edition-ami/blob/main/published_amis.md).
 
-We recommend using CloudFormation to deploy the Burp Suite Enterprise Edition AMI:
+We recommend using CloudFormation to deploy the Burp Suite DAST AMI:
 
 ## Create a stack
 
@@ -10,7 +10,7 @@ We recommend using CloudFormation to deploy the Burp Suite Enterprise Edition AM
 2. Log in to your AWS account and go to the CloudFormation console.
 3. Create a stack with new resources.
 4. Upload the CloudFormation template.
-5. Enter the **Stack name** and **ImageID** of the Burp Suite Enterprise Edition AMI for your region.
+5. Enter the **Stack name** and **ImageID** of the Burp Suite DAST AMI for your region.
 
 ## Configure your instance
 
@@ -30,6 +30,6 @@ We recommend using CloudFormation to deploy the Burp Suite Enterprise Edition AM
 1. In the **Review and create** window, check the configuration and then click **Submit**.
 2. Wait for the stack to be created.
 3. To navigate to your newly created EC2 instance, go to the **Resources** tab of your stack and click the link in the **Physical ID** column.
-4. In the **Instances** window, select the instance and copy and paste the IP address or DNS name into a browser. The Burp Suite Enterprise Edition console will open.
+4. In the **Instances** window, select the instance and copy and paste the IP address or DNS name into a browser. The Burp Suite DAST console will open.
 
-If this is the first time that you have used the database with Burp Suite Enterprise Edition, you will be prompted to create the administrator user credentials. For more information, see [Creating the admin user](https://portswigger.net/burp/documentation/enterprise/setup/self-hosted/kubernetes/create-admin).
+If this is the first time that you have used the database with Burp Suite DAST, you will be prompted to create the administrator user credentials. For more information, see [Creating the admin user](https://portswigger.net/burp/documentation/enterprise/setup/self-hosted/kubernetes/create-admin).
