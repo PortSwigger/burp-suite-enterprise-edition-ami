@@ -1,33 +1,33 @@
-# Burp Suite DAST 2025.3.1 AMIs
+# Burp Suite DAST 2025.5 AMIs
 
 The published AMI Ids are:
 
 | AWS Region | AMI Id |
 | :--------- | :----- |
-| af-south-1 | ami-0a305a5100f8ff553 |
-| ap-east-1 | ami-0639d2eada3104675 |
-| ap-south-1 | ami-0035aa69ce275d8cb |
-| ap-south-2 | ami-06d0793aca8c13abc |
-| ap-northeast-3 | ami-09196e3c0ad04e109 |
-| ap-northeast-2 | ami-0f98782d300c5ff50 |
-| ap-southeast-1 | ami-0a95b6fb13a120377 |
-| ap-southeast-2 | ami-0eed74ee0fda4060b |
-| ap-southeast-4 | ami-0e56b4e0c436eb5ec |
-| ap-northeast-1 | ami-01afb89fa5a91f155 |
-| ca-central-1 | ami-03eb99a45c45b3f4b |
-| eu-central-1 | ami-0cc1bccf7f0058002 |
-| eu-central-2 | ami-09afefb9e79419417 |
-| eu-west-1 | ami-044ea23cad301d737 |
-| eu-west-2 | ami-03be2734815af3a1c |
-| eu-west-3 | ami-06c5a0e9d9efb2a4a |
-| eu-north-1 | ami-04447fdcb57a73c2f |
-| eu-south-1 | ami-0bea239a8e486d301 |
-| eu-south-2 | ami-046e63022ec577edb |
-| il-central-1 | ami-03b2f5e8e6f6fb550 |
-| me-south-1 | ami-0a8c0e40bb3e9e80a |
-| me-central-1 | ami-011d2a73ac04dde88 |
-| sa-east-1 | ami-0d03d38a808779cf6 |
-| us-east-2 | ami-08ee8b104ea3d7e28 |
-| us-east-1 | ami-0858cf0d719dee861 |
-| us-west-1 | ami-088b4d58408f2a140 |
-| us-west-2 | ami-0df6cbda42362375e |
+| af-south-1 | ami-056c8973454ca5e3f |
+| ap-east-1 | ami-0c4557774d9f14994 |
+| ap-south-1 | ami-0459a5565144aac90 |
+| ap-south-2 | ami-085ec4077f173ec1c |
+| ap-northeast-3 | ami-02e0a32fab3fc8a02 |
+| ap-northeast-2 | ami-0347ff684207931c7 |
+| ap-southeast-1 | ami-0d670be5f446074ef |
+| ap-southeast-2 | ami-0df53470e3aa74b8f |
+| ap-southeast-4 | ami-02967135f5a0709ad |
+| ap-northeast-1 | ami-082a97eedcc3580f1 |
+| ca-central-1 | ami-05c6db11d3d1a7484 |
+| eu-central-1 | ami-0ec0d5d44b3854202 |
+| eu-central-2 | ami-004ee983f6acb9523 |
+| eu-west-1 | ami-02e071d416edb6c9f |
+| eu-west-2 | ami-0122e9a19289cdbec |
+| eu-west-3 | ami-0583b787b3b38b235 |
+| eu-north-1 | ami-0307d2ada026ea175 |
+| eu-south-1 | ami-0c8eba78e6c959be9 |
+| eu-south-2 | ami-0ecb79a68e09f89e7 |
+| il-central-1 | ami-0a04a33231f1b3716 |
+| me-south-1 | ami-02367b090a8e7549d |
+| me-central-1 | ami-04dd2b240bceaede0 |
+| sa-east-1 | ami-0b9f004db0f5e650c |
+| us-east-2 | ami-007409a9ce9175564 |
+| us-east-1 | ami-0baf7b4da527bc5ba |
+| us-west-1 | ami-03d2209c04ae53ecb |
+| us-west-2 | ami-00196d369086074c9 |
