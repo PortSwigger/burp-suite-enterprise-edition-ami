@@ -1,33 +1,33 @@
-# Burp Suite DAST 2025.5 AMIs
+# Burp Suite DAST 2025.5.1 AMIs
 
 The published AMI Ids are:
 
 | AWS Region | AMI Id |
 | :--------- | :----- |
-| af-south-1 | ami-056c8973454ca5e3f |
-| ap-east-1 | ami-0c4557774d9f14994 |
-| ap-south-1 | ami-0459a5565144aac90 |
-| ap-south-2 | ami-085ec4077f173ec1c |
-| ap-northeast-3 | ami-02e0a32fab3fc8a02 |
-| ap-northeast-2 | ami-0347ff684207931c7 |
-| ap-southeast-1 | ami-0d670be5f446074ef |
-| ap-southeast-2 | ami-0df53470e3aa74b8f |
-| ap-southeast-4 | ami-02967135f5a0709ad |
-| ap-northeast-1 | ami-082a97eedcc3580f1 |
-| ca-central-1 | ami-05c6db11d3d1a7484 |
-| eu-central-1 | ami-0ec0d5d44b3854202 |
-| eu-central-2 | ami-004ee983f6acb9523 |
-| eu-west-1 | ami-02e071d416edb6c9f |
-| eu-west-2 | ami-0122e9a19289cdbec |
-| eu-west-3 | ami-0583b787b3b38b235 |
-| eu-north-1 | ami-0307d2ada026ea175 |
-| eu-south-1 | ami-0c8eba78e6c959be9 |
-| eu-south-2 | ami-0ecb79a68e09f89e7 |
-| il-central-1 | ami-0a04a33231f1b3716 |
-| me-south-1 | ami-02367b090a8e7549d |
-| me-central-1 | ami-04dd2b240bceaede0 |
-| sa-east-1 | ami-0b9f004db0f5e650c |
-| us-east-2 | ami-007409a9ce9175564 |
-| us-east-1 | ami-0baf7b4da527bc5ba |
-| us-west-1 | ami-03d2209c04ae53ecb |
-| us-west-2 | ami-00196d369086074c9 |
+| af-south-1 | ami-01ff4283e212af9f3 |
+| ap-east-1 | ami-0d36d13d284f9697c |
+| ap-south-1 | ami-08237db14a50ed934 |
+| ap-south-2 | ami-06f559a1d80581246 |
+| ap-northeast-3 | ami-0305fd5204e73fc49 |
+| ap-northeast-2 | ami-0d4e16db7848bb8ca |
+| ap-southeast-1 | ami-08e75a151b5dd7742 |
+| ap-southeast-2 | ami-0c5ff21c868b5495e |
+| ap-southeast-4 | ami-020985dc6ccb06eb6 |
+| ap-northeast-1 | ami-06b49079217ea377d |
+| ca-central-1 | ami-0b77984ada60413bc |
+| eu-central-1 | ami-0cccac16426a78e8a |
+| eu-central-2 | ami-01fe533a575ca23c8 |
+| eu-west-1 | ami-03b8da703281ebb9e |
+| eu-west-2 | ami-09fdc46d6c97e0c67 |
+| eu-west-3 | ami-083f6b7a7b318a513 |
+| eu-north-1 | ami-0223f5c7a585d91a5 |
+| eu-south-1 | ami-0125552521d5bd511 |
+| eu-south-2 | ami-019f03d15ebf791a2 |
+| il-central-1 | ami-019df8989fc081b98 |
+| me-south-1 | ami-0dcecdf79089bbfc8 |
+| me-central-1 | ami-0bd5ab7556befc81b |
+| sa-east-1 | ami-06cc45ba511acd997 |
+| us-east-2 | ami-0e472182dde04d995 |
+| us-east-1 | ami-0329770922ec923d2 |
+| us-west-1 | ami-00021e1d34665153f |
+| us-west-2 | ami-0bb2ab807ada99a3c |
