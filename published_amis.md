@@ -20,7 +20,7 @@ The published AMI Ids are:
 | eu-west-1 | ami-0c661688313675977 |
 | eu-west-2 | ami-0acc9c1c0a3c97058 |
 | eu-west-3 | ami-0708b4a4baefcc821 |
-| eu-north-1 | ami-0bbaa3e1dab38caa5 |
+| eu-north-1 | ami-08df86ef2952cf490 |
 | eu-south-1 | ami-03adea0ee793477a0 |
 | eu-south-2 | ami-0a680adf19421baca |
 | il-central-1 | ami-0504c808e31b9986d |
