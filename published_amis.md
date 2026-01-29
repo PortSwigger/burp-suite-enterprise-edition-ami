@@ -1,33 +1,33 @@
-# Burp Suite DAST 2025.12 AMIs
+# Burp Suite DAST 2026.1 AMIs
 
 The published AMI Ids are:
 
 | AWS Region | AMI Id |
 | :--------- | :----- |
-| af-south-1 | ami-02a803a87da0ea9cc |
-| ap-east-1 | ami-0c1d5b23fa2df5829 |
-| ap-south-1 | ami-02626040682257070 |
-| ap-south-2 | ami-09895d8d96d76abda |
-| ap-northeast-3 | ami-059d355c28662b7e9 |
-| ap-northeast-2 | ami-016f7e56d2c5c877f |
-| ap-southeast-1 | ami-030b8034760783edf |
-| ap-southeast-2 | ami-0186b4d46d2695d3c |
-| ap-southeast-4 | ami-046dd5b79adfac999 |
-| ap-northeast-1 | ami-03dfd34787c0c3a21 |
-| ca-central-1 | ami-010d807e9fac56609 |
-| eu-central-1 | ami-0cc32f8ff4a7ac55b |
-| eu-central-2 | ami-049de2643f526efc1 |
-| eu-west-1 | ami-0bccb55d3c2267315 |
-| eu-west-2 | ami-07304af606afb0244 |
-| eu-west-3 | ami-05caf6f60d6890790 |
-| eu-north-1 | ami-081b93837a19d014c |
-| eu-south-1 | ami-0e8e5c4faff92e8ee |
-| eu-south-2 | ami-05499f6ed46338759 |
-| il-central-1 | ami-0780045c793ab48e2 |
-| me-south-1 | ami-058cc0b8c33286fd4 |
-| me-central-1 | ami-0dffc7d7d36266bce |
-| sa-east-1 | ami-0241eafe033f1dbc1 |
-| us-east-2 | ami-04377be5dcc1cd7cd |
-| us-east-1 | ami-01f1bb52f1a565e0a |
-| us-west-1 | ami-0e63946fcda6726c1 |
-| us-west-2 | ami-0c9975569b2ec696d |
+| af-south-1 | ami-00b8f42e0a47de312 |
+| ap-east-1 | ami-0d6d60f22fe8cbdbe |
+| ap-south-1 | ami-01b2e7ce8726da4bf |
+| ap-south-2 | ami-04d1d7a847ddb88e4 |
+| ap-northeast-3 | ami-030a2a95dfe6d3f8d |
+| ap-northeast-2 | ami-0d7a60717c90fb64d |
+| ap-southeast-1 | ami-0fa577e2f844aa15c |
+| ap-southeast-2 | ami-032330a81c928e604 |
+| ap-southeast-4 | ami-0c693d8ecbc5eed78 |
+| ap-northeast-1 | ami-05d32fcd4f0e75f83 |
+| ca-central-1 | ami-0a33db9c973f6755b |
+| eu-central-1 | ami-0f98ec587ae837c97 |
+| eu-central-2 | ami-0d78f5d40152595e2 |
+| eu-west-1 | ami-0f202f619fbc0135e |
+| eu-west-2 | ami-01d9e52936bd20baa |
+| eu-west-3 | ami-0ec98d44efc12b36b |
+| eu-north-1 | ami-0ee916ecb7a5a7482 |
+| eu-south-1 | ami-0a2779eeb20157561 |
+| eu-south-2 | ami-0c77f2837ad5b7997 |
+| il-central-1 | ami-009e7fb3d2cf578c7 |
+| me-south-1 | ami-0cda3137259ed7707 |
+| me-central-1 | ami-01a74e7b1be02105d |
+| sa-east-1 | ami-0712f64a2964798a8 |
+| us-east-2 | ami-06b13a2b2f1622874 |
+| us-east-1 | ami-0c5f6a42fb346dcdc |
+| us-west-1 | ami-034d5bd8188357f7a |
+| us-west-2 | ami-002f3eae44feec4f0 |
