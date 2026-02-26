@@ -1,3 +1,9 @@
+> 🚨 **This project is deprecated!** 🚨
+> 
+> **End of Life (EOL): 31/05/2026**
+> 
+> Please contact us to discuss your options: https://portswigger.net/burp/dast/pricing
+
 # Setup guide: using an AMI
 
 You can use the Burp Suite DAST AMI to create an EC2 instance that contains Burp Suite DAST. The AMI includes both the server and scanning machine components required for an installation capable of scanning.
