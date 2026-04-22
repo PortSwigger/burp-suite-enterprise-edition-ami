@@ -1,31 +1,31 @@
-# Burp Suite DAST 2026.3.1 AMIs
+# Burp Suite DAST 2026.4 AMIs
 
 The published AMI Ids are:
 
 | AWS Region | AMI Id |
 | :--------- | :----- |
-| af-south-1 | ami-003fd060995ad5801 |
-| ap-east-1 | ami-0ddea42388a0d9d6e |
-| ap-south-1 | ami-0fd6581f7d455fcc6 |
-| ap-south-2 | ami-026a303d84c7d6cda |
-| ap-northeast-3 | ami-058185e2234fa2221 |
-| ap-northeast-2 | ami-0948e90bb377c4b46 |
-| ap-southeast-1 | ami-08c8b54133ad1ecdd |
-| ap-southeast-2 | ami-07172acbaaecc4c49 |
-| ap-southeast-4 | ami-0db7d5aaaae4f673d |
-| ap-northeast-1 | ami-0637f9f84b24d6a4c |
-| ca-central-1 | ami-0e56333278dd0b4b6 |
-| eu-central-1 | ami-03aa860aa351014d1 |
-| eu-central-2 | ami-0c6736a123f199965 |
-| eu-west-1 | ami-010fc74658e25c12a |
-| eu-west-2 | ami-01ab93a81ff2b2c39 |
-| eu-west-3 | ami-0e308e28331e53053 |
-| eu-north-1 | ami-02703fd032d40f144 |
-| eu-south-1 | ami-056e09537444985a0 |
-| eu-south-2 | ami-0a521f00f0084b442 |
-| il-central-1 | ami-00b68f594ecb373fd |
-| sa-east-1 | ami-0065d8c71800b0369 |
-| us-east-2 | ami-0d25c30ceafd3dcc6 |
-| us-east-1 | ami-0e84fe99a07263803 |
-| us-west-1 | ami-030ff0c5850cbf62c |
-| us-west-2 | ami-07e634e46f8472df3 |
+| af-south-1 | ami-098e9c39eedf98e75 |
+| ap-east-1 | ami-0cdcb825aabcd8f36 |
+| ap-south-1 | ami-0868af7b7cf0a1dd0 |
+| ap-south-2 | ami-04d61a2186145b5dd |
+| ap-northeast-3 | ami-0c15a71f592dd0996 |
+| ap-northeast-2 | ami-0a6682d8a7ca21cba |
+| ap-southeast-1 | ami-0f8b068209073511b |
+| ap-southeast-2 | ami-04f42e5db1324cee7 |
+| ap-southeast-4 | ami-0a4841ecc7a8d4a8c |
+| ap-northeast-1 | ami-062fd472276dbb5cb |
+| ca-central-1 | ami-01d3654277701bbc8 |
+| eu-central-1 | ami-0e90cb6f8fc292551 |
+| eu-central-2 | ami-053f8a9b93b804cc9 |
+| eu-west-1 | ami-0145b71869bb29ced |
+| eu-west-2 | ami-07102bfc589f3334b |
+| eu-west-3 | ami-00ca73c90f5c16343 |
+| eu-north-1 | ami-0f377fb88bc5c8913 |
+| eu-south-1 | ami-088877b1bdae28af8 |
+| eu-south-2 | ami-0fa3d7202a0e7b553 |
+| il-central-1 | ami-06a470a22d93a6864 |
+| sa-east-1 | ami-037223fcbeaabddfd |
+| us-east-2 | ami-07329325dbcdd9a57 |
+| us-east-1 | ami-0d54ff5d4634ed665 |
+| us-west-1 | ami-084484de5de0bed24 |
+| us-west-2 | ami-09a6bbf7874b959bd |
